@@ -10,18 +10,47 @@ a {
 
 ul, ol {
     list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0px;
 }
 
 button {
     cursor: pointer;
 }
 
-/*? ============================================= */
-
-.header {
-
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+.container {
+    max-width: 1158px;
+    padding-left: 15px; 
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+/*? ====================HEADER========================= */
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -30,10 +59,21 @@ button {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    margin-right: 76px;
 }
 
 .logo-part {
     color: #2e2f42;;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
 }
 
 .nav-link {
@@ -42,6 +82,9 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
 }
 
 .nav-link:hover,
@@ -51,6 +94,12 @@ button {
 
 .address {
     font-style: normal;
+    margin-left: auto;
+}
+
+.address-list {
+    display: flex;
+    gap: 40px;
 }
 
 .address-link {
@@ -69,7 +118,12 @@ button {
 
 .hero {
     background-color: #2E2F42;
+    padding: 188px 472px;
+}
 
+.hero-wrap {
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-title {
@@ -80,6 +134,7 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #FFF;
+    margin-bottom: 48px;
 }
 
 .hero-button {
@@ -89,6 +144,11 @@ button {
     letter-spacing: 0.04em;
     color: #fff;
     background-color: #4D5AE5;
+    border-radius: 4px;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border: none;
+    align-self: center;
 }
 
 .hero-button:hover,
@@ -97,11 +157,18 @@ button {
 }
 
 
+.features {
+    padding: 120px 156px;
+}
 
+.features-list {
+    display: flex;
+    gap: 24px;
+}
 
-.features-list {}
-
-.features-item {}
+.features-item {
+    width: calc((100% - 24px * 3) / 4)
+}
 
 .features-subtitle {
     font-weight: 500;
@@ -109,6 +176,7 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .features-item-text {
@@ -119,8 +187,11 @@ button {
 }
 
 
+
 .team {
     background-color: #f4f4fd;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .team-title {
@@ -131,12 +202,17 @@ button {
     color: #2e2f42;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 72px;
 }
 
-.team-list {}
+.team-list {
+    display: flex;
+    gap: 24px;
+}
 
 .team-item {
     background-color: #fff;
+    width: calc((100% - 3 * 24px) /4)
 }
 
 .team-subtitle {
@@ -145,17 +221,26 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .team-item-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
     color: #434455;
+    padding-bottom: 32px;
 }
 
 
-.portfolio {}
+
+.portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
 .portfolio-title {
     font-weight: 700;
@@ -165,12 +250,24 @@ button {
     color: #2e2f42;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 72px;
 }
 
-.portfolio-list {}
+.portfolio-list {
+    display: flex;
+    gap: 48px 24px;
+    flex-wrap: wrap;
+}
 
 .portfolio-item {
+    width: calc((100% - 2 * 24px) / 3);
+}
 
+.portfolio-item-lowpart {
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+    padding: 32px 16px;
 }
 
 .portfolio-subtitle {
@@ -179,6 +276,7 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .portflio-item-text {
@@ -187,6 +285,8 @@ button {
     letter-spacing: 0.02em;
     color: #434455;
 }
+
+/*? ====================FOOTER========================= */
 
 .footer {
     background-color: #2e2f42;
@@ -198,8 +298,16 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    margin-top: 16px;
 }
 
 .logo-footer-part {
     color: #f4f4fd;
+}
+
+.footer-wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 264px;
+    height: 112px;
 }
